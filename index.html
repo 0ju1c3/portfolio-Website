@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Portfolio Website</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 id="ojas"><span>O</span>jas.</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!--<li><a href="#Services">Services</a></li>
+                    -->
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Backend Developer</p>
+                <h1>Hi, I'm <span>Ojas</span><br />Tapadia</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/background1.png" />
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hey! I'm passionate about two things: backend development and the
+                        art of customizing Linux and Neovim configurations. While my days
+                        are spent diving deep into backend technologies, my nights are
+                        often dedicated to tweaking every pixel and optimizing every
+                        keystroke in my Linux environment and Neovim setup. Whether it's
+                        crafting efficient database queries or fine-tuning my terminal
+                        aesthetics, I thrive on the balance between functionality and
+                        aesthetics. It's all about creating seamless experiences, whether
+                        in code or in the user interface. So, if you ever need someone to
+                        geek out with over server-side logic or the perfect color scheme
+                        for your terminal, count me in!
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            Skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Backend</span><br />Designing and implementing
+                                Server-Side logic
+                            </li>
+                            <li>
+                                <span>Web App Development</span><br />Web app development
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>Yantra-VIT's Official Hackathon</span><br />Organiser
+                                and Backend Developer(Feb 2024 - Present)
+                            </li>
+                            <li>
+                                <span>LaserTag Event Coordinator</span><br />Event coordinator
+                                for the biggest event conducted by a club in Gravitas’23.
+                                Having more than 1000 participants.(Aug 2023 - Sept 2023)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>VIT Vellore</span><br />Btech CSE(2022-present)</li>
+                            <li>
+                                <span>Essar International School</span><br />High School
+                                Diploma:91.2% (2021-2022)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/audioVisualiser.jpeg" />
+                    <div class="layer">
+                        <h3>Audio Visualizer</h3>
+                        <p>
+                            Using Web Audio API, Canvas API and vanilla HTML, CSS and
+                            Javascript. Takes mic and speaker input and converts the sound
+                            into corresponding bars
+                        </p>
+                        <a href="/audio-visualiser-1/index.html" target="_blank">CLICK</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bubbly.jpeg" />
+                    <div class="layer">
+                        <h3>BUBBLY-WEB GAME</h3>
+                        <p>
+                            Web game application using vanilla HTML, CSS, Javascript and
+                            Canvas API
+                        </p>
+                        <a href="/bubbly_show/index.html" target="_blank">CLICK</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/neovim.jpeg" />
+                    <div class="layer">
+                        <h3>CUSTOM NEOVIM CONFIG</h3>
+                        <p>My own neovim config using packer.nvim</p>
+                        <a href="https://github.com/0ju1c3/custom_nvim_config" target="_blank">CLICK</a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/0ju1c3/" target="_blank" class="btn">View More</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>ojastapadia.work@gmail.com</p>
+                    <p>+919879101715</p>
+                    <div class="social-icons">
+                        <a href=""></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="Submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+                <a href="images/Resume.pdf" target="_blank" class="btn btn2">Download Resume</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
